@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Emang ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Nunito:wght@400;600;700&display=swap');
+:root{--paper:#f0d7a8;--ink:#5c3626;--soft:#8c644a;--gold:#b0843e;--cream:#f7efdf}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at center,#f8e8c8,#d8bd8d);color:var(--ink);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden}
+#app{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;padding:28px 16px}
+.screen{display:none;width:min(100%,1000px);min-height:82vh;position:relative;align-items:center;justify-content:center;flex-direction:column;text-align:center}.screen.active{display:flex}
+h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:600;letter-spacing:.06em;margin:0 0 4px;text-shadow:2px 3px 0 #c9b48c}
+.sub{font-family:'Great Vibes',cursive;font-size:2rem;margin:0 0 22px}.hint{font:600 .85rem Nunito,sans-serif;color:#997b56;letter-spacing:.08em}
+.envelope{border:0;background:transparent;cursor:pointer;position:relative;animation:float 3s ease-in-out infinite;max-width:min(76vw,540px);padding:0}
+.envelope img{width:100%;filter:drop-shadow(0 18px 18px #6b4b2b44)}
+.cats{position:absolute;inset:0;pointer-events:none}.cat{position:absolute;width:clamp(65px,12vw,130px);animation:float 4s ease-in-out infinite}.cat:nth-child(1){left:2%;top:24%}.cat:nth-child(2){right:2%;top:28%;animation-delay:.7s}.cat:nth-child(3){left:13%;bottom:5%;animation-delay:1.2s}.cat:nth-child(4){right:13%;bottom:6%;animation-delay:.4s}.cat:nth-child(5){left:20%;top:4%;animation-delay:1.7s}.cat:nth-child(6){right:20%;top:4%;animation-delay:.9s}
+@keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}
+.menu-title{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:6px}.choices{display:flex;gap:clamp(15px,5vw,55px);align-items:center;justify-content:center;flex-wrap:wrap;margin:22px 0}
+.choice{border:0;background:transparent;cursor:pointer;color:var(--ink);font:600 1.1rem Nunito,sans-serif;display:flex;flex-direction:column;align-items:center;gap:6px;transition:.2s}.choice:hover{transform:translateY(-8px) scale(1.04)}.choice img{width:clamp(130px,22vw,205px);height:clamp(130px,22vw,205px);object-fit:contain;filter:drop-shadow(0 10px 10px #6b4b2b33)}
+.panel{width:min(92vw,760px);max-height:78vh;overflow:auto;background:linear-gradient(135deg,#f8edda,#ead4aa);border:1px solid #c7a56d;border-radius:12px;box-shadow:0 18px 50px #6b4b2b35;padding:clamp(24px,5vw,55px);text-align:left;position:relative}
+.panel:before{content:"";position:absolute;inset:10px;border:1px solid #d6bd91;pointer-events:none;border-radius:6px}
+.panel h2{text-align:center;font-size:2.2rem;margin:0 0 20px}.letter-text{white-space:pre-line;font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.65;position:relative}
+.back{position:absolute;top:18px;left:18px;border:1px solid #b0843e;background:#f6e8cd;color:var(--ink);border-radius:30px;padding:9px 17px;cursor:pointer;font:600 .85rem Nunito,sans-serif;z-index:2}
+.photo-frame{background:#f7f0e2;padding:13px 13px 42px;box-shadow:0 14px 30px #4a2c1c40;transform:rotate(-2deg);max-width:min(78vw,420px);margin:20px auto}.photo-frame img{display:block;width:100%;max-height:55vh;object-fit:contain}.photo-caption{text-align:center;font-family:'Great Vibes',cursive;font-size:1.8rem;margin-top:8px}
+.music-card{background:#ead7b6;border:1px solid #b99762;border-radius:18px;padding:28px;width:min(90vw,440px);box-shadow:0 15px 40px #4a2c1c30}.cover{width:180px;height:180px;border-radius:50%;object-fit:cover;border:9px solid #8c6745;box-shadow:0 8px 20px #0003;animation:spin 12s linear infinite;animation-play-state:paused}.cover.playing{animation-play-state:running}@keyframes spin{to{transform:rotate(360deg)}}.music-card h2{margin:18px 0 5px}.music-card p{margin:0 0 18px;color:var(--soft);font: .9rem Nunito,sans-serif}.music-card button,.plain{border:1px solid var(--gold);background:#f6e8cd;color:var(--ink);padding:10px 20px;border-radius:30px;cursor:pointer;font:600 .95rem Nunito,sans-serif}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}.heart{position:absolute;bottom:-30px;color:#b84d54;animation:rise 4s linear forwards;font-size:22px}@keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+footer{font: .75rem Nunito,sans-serif;color:#9b805d;margin-top:18px}
+@media(max-width:600px){.cat:nth-child(5),.cat:nth-child(6){display:none}.screen{min-height:88vh}.panel{max-height:80vh}.choices{gap:10px}.choice img{width:125px;height:125px}}
+</style></head>
+<body><div id="hearts"></div><main id="app">
+<section class="screen active" id="home">
+ <div class="cats">
+  <img class="cat" src="assets/cat1.png"><img class="cat" src="assets/cat2.png"><img class="cat" src="assets/cat3.png"><img class="cat" src="assets/cat4.png"><img class="cat" src="assets/cat5.png"><img class="cat" src="assets/cat6.png">
+ </div>
+ <h1>HAPPY BIRTHDAY</h1><p class="sub">~ for emang ~</p>
+ <button class="envelope" id="open"><img src="assets/letter.png" alt="A sealed vintage letter"></button>
+ <p class="hint">~ click the letter to open it ~</p>
+</section>
+<section class="screen" id="menu">
+ <h1 class="menu-title">A little something for you</h1><p class="sub">~ pick puu 🙈 ~</p>
+ <div class="choices">
+  <button class="choice" data-page="songs"><img src="assets/icon_songs.png" alt=""><span>songs</span></button>
+  <button class="choice" data-page="message"><img src="assets/icon_message.png" alt=""><span>message</span></button>
+  <button class="choice" data-page="photo"><img src="assets/icon_photo.png" alt=""><span>photo</span></button>
+ </div><footer>made with love ♡</footer>
+</section>
+<section class="screen" id="message"><button class="back">← back</button>
+ <article class="panel"><h2>haii, emang! ♡</h2><div class="letter-text" id="letterText"></div></article>
+</section>
+<section class="screen" id="photo"><button class="back">← back</button>
+ <div><h1 class="menu-title">our little memory</h1><div class="photo-frame"><img src="assets/photo.png" alt="A favorite photo"><div class="photo-caption">a little moment to keep ♡</div></div></div>
+</section>
+<section class="screen" id="songs"><button class="back">← back</button>
+ <div><h1 class="menu-title">a song for you</h1><div class="music-card">
+  <img class="cover" id="cover" src="assets/portrait.png" alt="Music cover"><h2>Paraluman</h2><p>Adie · a song that reminds me of you</p>
+  <button id="play">▶ Play music</button>
+  <audio id="audio" src="assets/music.mp3" loop preload="none"></audio>
+ </div></div>
+</section>
+</main>
+<script>
+const bodyText = `hehe, soo cute jud kaayo sa imong nickname. happy birthday puu!
+
+kabalo ka, l honestly don’t know what to say because i’m just so thankful nga nakaila tika ganda-gandah mo puu. I don’t know how to explain this feeling, but whenever i’m with you, I feel happy, comfortable, and at peace. it’s like I can just be myself without having to pretend to be someone else. you have this kind of presence nga bisan simple moments lang, you somehow make me special.
+
+and you know what? Every time I hear the song “Paraluman,” ikaw jud akong mahinumduman. I don’t know why, but something about that song reminds me of you. siguro it’s the way the song makes everything feel soft, warm, and beautiful. just like how I see you. it’s funny how a song can suddenly remind you of someone, and for me, that someone is you. maybe someday, whenever you hear that song, I hope you’ll remember me too.
+
+i’m really glad that our paths crossed. I never expected nga you’d become someone this special to me, but I’m genuinely happy that I got to know you. thank you for making me smile, for the little moments, and for simply being you.
+
+on your special day, I wish you genuine happiness, good health, peace of mind, and all the beautiful things life has to offer. I hope you achieve everything you’re wishing and praying for. I hope life treats you kindly, and whenever things get difficult, I hope you never forget how much you are worth.
+
+I don’t know what the future holds, but I’m happy that I get to know you and share these little moments with you. I hope I can make you feel as special as you make me feel.
+
+enjoy your day, emang! keep that beautiful smile, and please stay the way you are. i’m always rooting for you. happy birthday once again! i’m really lucky that somehow, out of all the people in this world, I got to meet you.`;
+document.getElementById('letterText').textContent=bodyText;
+const screens=[...document.querySelectorAll('.screen')];
+function show(id){screens.forEach(s=>s.classList.toggle('active',s.id===id));}
+document.getElementById('open').onclick=()=>{show('menu');};
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>show(b.dataset.page));
+document.querySelectorAll('.back').forEach(b=>b.onclick=()=>{document.getElementById('audio').pause();document.getElementById('cover').classList.remove('playing');document.getElementById('play').textContent='▶ Play music';show('menu');});
+const audio=document.getElementById('audio'),cover=document.getElementById('cover'),play=document.getElementById('play');
+play.onclick=async()=>{if(audio.paused){try{await audio.play();cover.classList.add('playing');play.textContent='Ⅱ Pause music';}catch(e){play.textContent='Tap to allow music';}}else{audio.pause();cover.classList.remove('playing');play.textContent='▶ Play music';}};
+function heart(x=Math.random()*innerWidth){const h=document.createElement('span');h.className='heart';h.textContent=['♥','♡','✦'][Math.floor(Math.random()*3)];h.style.left=x+'px';h.style.animationDuration=(3+Math.random()*2)+'s';document.getElementById('hearts').append(h);setTimeout(()=>h.remove(),5200);}
+document.addEventListener('click',e=>{if(!e.target.closest('button'))heart(e.clientX);});
+</script></body></html>
